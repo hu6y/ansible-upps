@@ -7,3 +7,6 @@
     - name: Pause for 5 minutes to build app cache
       ansible.builtin.pause:
         minutes: 3
+    - name: extra vars
+      debug:
+        msg: "{{ ext_env | default('not set') }}"
